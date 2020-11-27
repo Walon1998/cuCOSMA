@@ -1,0 +1,924 @@
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15104x15104 * 15104x15104
+Max Error: 0.0383301, Max Error: 0.0529785, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15168x15168 * 15168x15168
+Max Error: 0.0390625, Max Error: 0.0578613, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15232x15232 * 15232x15232
+Max Error: 0.0380859, Max Error: 0.0539551, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15296x15296 * 15296x15296
+Max Error: 0.0412598, Max Error: 0.0556641, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15360x15360 * 15360x15360
+Max Error: 0.0378418, Max Error: 0.0541992, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15424x15424 * 15424x15424
+Max Error: 0.0390625, Max Error: 0.0585938, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15488x15488 * 15488x15488
+Max Error: 0.0412598, Max Error: 0.0556641, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15552x15552 * 15552x15552
+Max Error: 0.0419922, Max Error: 0.0561523, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15616x15616 * 15616x15616
+Max Error: 0.0390625, Max Error: 0.0549316, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15680x15680 * 15680x15680
+Max Error: 0.0405273, Max Error: 0.0561523, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15744x15744 * 15744x15744
+Max Error: 0.0429688, Max Error: 0.0617676, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15808x15808 * 15808x15808
+Max Error: 0.0419922, Max Error: 0.0568848, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15872x15872 * 15872x15872
+Max Error: 0.0410156, Max Error: 0.0588379, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+15936x15936 * 15936x15936
+Max Error: 0.0400391, Max Error: 0.0625, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+16000x16000 * 16000x16000
+Max Error: 0.0427246, Max Error: 0.060791, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+16064x16064 * 16064x16064
+Max Error: 0.0410156, Max Error: 0.0634766, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+16128x16128 * 16128x16128
+Max Error: 0.0415039, Max Error: 0.0625, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+16192x16192 * 16192x16192
+Max Error: 0.0400391, Max Error: 0.0576172, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+16256x16256 * 16256x16256
+Max Error: 0.043457, Max Error: 0.0598145, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+16320x16320 * 16320x16320
+Max Error: 0.0444336, Max Error: 0.0656738, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
+rm -rf  cuCOSMA
+ 
+nvcc "../src/main.cu" -O3 -std=c++11 -gencode arch=compute_70,code=sm_70 -I"../src/" -lcublas -o "cuCOSMA" 
+../src/test_correctness.h(130): warning: variable "AlignmentA" was declared but never referenced
+
+../src/test_correctness.h(131): warning: variable "AlignmentB" was declared but never referenced
+
+../src/test_correctness.h(133): warning: variable "kstages" was declared but never referenced
+
+../src/benchmark.h: In function ‘void benchmark()’:
+../src/benchmark.h:166:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/benchmark.h:166:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/benchmark.h:166:312: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                        ^              
+../src/benchmark.h:166:353: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                 ^              
+../src/test_correctness.h: In function ‘void test_correctness()’:
+../src/test_correctness.h:170:230: warning: narrowing conversion of ‘(pitch_A / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                      ^              
+../src/test_correctness.h:170:271: warning: narrowing conversion of ‘(pitch_B / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                               ^              
+../src/test_correctness.h:170:318: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                              ^              
+../src/test_correctness.h:170:365: warning: narrowing conversion of ‘(pitch_C / sizeof (float))’ from ‘size_t’ {aka ‘long unsigned int’} to ‘cutlass::layout::RowMajor::Index’ {aka ‘int’} inside { } [-Wnarrowing]
+  typename Gemm::Arguments args( { M, N, K },  // Gemm Problem dimensions
+                                                                                                                                                                                                                                                                                                                                                                             ^              
+16384x16384 * 16384x16384
+Max Error: 0.0444336, Max Error: 0.0620117, Implementation seems correct!
+Cublas WarmUp..........
+
+Cutlass WarmUp..........
+
+Cosma WarmUp..........
+
+____________________________________________________________________________________________________
