@@ -1,7 +1,4 @@
 # cuCOSMA: Near Optimal Matrix-Matrix Multiplication in CUDA C++
-## Bachelor Thesis Neville Walo
-
-### Abstract
 
 Matrix-matrix multiplication is one of the most important routines
 in scientific computing. Implementing this operation efficiently is a
@@ -9,7 +6,7 @@ complex challenge that that needs to take the memory model and architectural
 details into account. There are several high-performance
 matrix-matrix multiplication implementations for GPUs like cuBLAS,
 CUTLASS and rocBLAS. However, none of them is optimal for all applications.
-Here we present our implementation of COSMA [31] on a
+Here we present our implementation of COSMA on a
 single GPU. Assuming that each matrix row is properly aligned and
 that the matrix dimensions are available at compile time, we wrote a
 matrix-matrix multiplication kernel that is faster than CUTLASS and
